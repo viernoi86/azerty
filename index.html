@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile bladrox</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://w.wallhaven.cc/full/w5/wallhaven-w5eq57.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid white;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    p.bio {
+      max-width: 500px;
+      margin: 10px auto 20px auto;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .links {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .link-btn {
+      padding: 10px 18px;
+      background: rgba(0,0,0,0.6);
+      border: 2px solid white;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .link-btn:hover {
+      background: white;
+      color: black;
+    }
+
+    #clock {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      font-size: 1rem;
+      background: rgba(0,0,0,0.5);
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="clock">00:00:00</div>
+
+  <img src="https://github.com/viernoi86/image/blob/main/bladrox.jpg?raw=true" alt="Photo de profil" class="profile-pic" />
+  <h1>Bladrox</h1>
+  <p class="bio">Joueur fortnite depuis le début du chapitre 5<br>
+  Joueur manette scuf sur ps4</p>
+
+  <!-- Liens de redirection -->
+  <div class="links">
+    <a href="https://youtube.com" target="_blank" class="link-btn">YouTube</a>
+    <a href="https://discord.com/channels/@me" target="_blank" class="link-btn">Discord</a>
+  </div>
+
+  <script>
+    // Horloge en haut à droite
+    const clock = document.getElementById("clock");
+
+    setInterval(() => {
+      const now = new Date();
+      clock.textContent = now.toLocaleTimeString();
+    }, 1000);
+  </script>
+
+</body>
+</html>
